@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Nav_css.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Shubham Singh Chauhan</h1>
+            <p>Passionate Web Developer & Data Enthusiast. I create clean, modern websites and explore innovative machine learning solutions.</p>
+            <a href="/projects" class="btn">
+                View Projects
+                <span class="btn-icon">→</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="Features" class="features">
+        <div class="feature">
+            <img src="https://img.icons8.com/ios-filled/100/000000/source-code.png" alt="Web Development Icon"/>
+            <h3>Web Development</h3>
+            <p>Crafting responsive and user-friendly websites using HTML, CSS, JavaScript, and modern frameworks.</p>
+        </div>
+        <div class="feature">
+            <img src="https://img.icons8.com/ios-filled/100/000000/artificial-intelligence.png" alt="Machine Learning Icon"/>
+            <h3>Machine Learning</h3>
+            <p>Building predictive models and data-driven solutions with Python, TensorFlow, and scikit-learn.</p>
+        </div>
+        <div class="feature">
+            <img src="https://img.icons8.com/ios-filled/100/000000/data-configuration.png" alt="Data Science Icon"/>
+            <h3>Data Science</h3>
+            <p>Analyzing and visualizing data to extract insights using Pandas, Matplotlib, and Seaborn.</p>
+        </div>
+    </section>
+
+    <section class="major-projects">
+        <h2>Major Projects</h2>
+        <div class="project">
+            <img src="https://via.placeholder.com/400x200" alt="Project 1"/>
+            <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio website showcasing my projects and skills, built with HTML, CSS, and JavaScript.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/400x200" alt="Project 2"/>
+            <div class="project-info">
+                <h3>ML Model for Predicting House Prices</h3>
+                <p>A machine learning model that predicts house prices based on various features using Python and scikit-learn.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/400x200" alt="Project 3"/>
+            <div class="project-info">
+                <h3>Data Analysis of COVID-19 Trends</h3>
+                <p>A comprehensive data analysis project that visualizes COVID-19 trends using Pandas and Matplotlib.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+
+   <section class="minor-projects" id="toggle_minor-projects">
+        <h2>Minor Projects</h2>
+        <div class="minor-projects-grid">
+            <div class="minor-project">
+                <h3 class="project-title">Weather App</h3>
+                <p class="project-desc">A simple web app that fetches and displays weather data using a public API.</p>
+            </div>
+            <div class="minor-project">
+                <h3 class="project-title">To-Do List</h3>
+                <p class="project-desc">A task management app that allows users to add, edit, and delete tasks.</p>
+            </div>
+            <div class="minor-project">
+                <h3 class="project-title">Chat Application</h3>
+                <p class="project-desc">A real-time chat application built with WebSockets.</p>
+            </div>
+            <div class="minor-project">
+                <h3 class="project-title">Blog Platform</h3>
+                <p class="project-desc">A blogging platform where users can create and share blog posts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm Shubham Singh Chauhan, a passionate web developer and data enthusiast. I love creating clean, modern websites and exploring innovative machine learning solutions. When I'm not coding, you can find me reading tech blogs or experimenting with new technologies.</p>
+    </section>
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
+        <a href="mailto:navneetsingh94520@gmail.com" class="btn">Email Me</a>
+        <a href="https://www.linkedin.com/in/navneet-singh-23cbsk/" class="btn">LinkedIn</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Shubham Singh Chauhan. All rights reserved.</p>
+    </footer>
+
+    <script src="Nav_scripts.js"></script>
+    <script>
+        const projects = document.querySelectorAll('.minor-project');
+
+            projects.forEach(project => {
+                project.addEventListener('click', () => {
+                    // Close all other projects
+                    projects.forEach(p => {
+                        if (p !== project) p.classList.remove('active');
+                    });
+                    // Toggle current project
+                    project.classList.toggle('active');
+                });
+            });
+
+    </script>
+</body>
+</html>

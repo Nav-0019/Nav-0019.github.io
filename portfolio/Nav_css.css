@@ -1,0 +1,122 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    overflow-x: hidden; 
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1e1e2f;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    border-bottom: 2px solid #ff4d5a;
+}
+
+/* Brand / name */
+.navbar h2 {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: default;
+    background: linear-gradient(180deg,rgba(0, 251, 255, 1) 0%, rgba(0, 251, 255, 1) 38%, rgba(0, 0, 0, 1) 53%, rgba(0, 251, 255, 1) 66%, rgba(0, 251, 255, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+/* Navbar list */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* Links */
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.55rem 1rem;
+    border-radius: 10px;
+    transition: all 0.25s ease-in-out;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #ff4d5a;
+}
+
+/* Dropdown select */
+.navbar ul li select {
+    padding: 0.55rem 0.85rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #1e1e2f;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    font-weight: 500;
+}
+
+.navbar ul li select:hover {
+    color: #fff;
+    background-color: #ff4d5a;
+    box-shadow: 0 4px 15px rgba(255,77,90,0.4);
+
+}
+
+/* Responsive: two-row layout with limited links */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.8rem 1rem;
+    }
+
+    /* Brand on first row */
+    .navbar h2 {
+        margin-bottom: 0.5rem; /* space between name and links */
+    }
+
+    /* Navbar list on second row */
+    .navbar ul {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    /* Show only Home (first li) and Projects (last li) */
+    .navbar ul li:not(:first-child):not(:last-child) {
+        display: none;
+    }
+
+    /* Link adjustments */
+    .navbar ul li a,
+    .navbar ul li select {
+        padding: 0.45rem 0.7rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+}
+
